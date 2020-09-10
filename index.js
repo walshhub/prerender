@@ -1,8 +1,3 @@
-#!/usr/bin/env node
-var prerender = require('./lib');
-var server = prerender();
-server.use(prerender.sendPrerenderHeader());
-// server.use(prerender.blockResources());
-server.use(prerender.removeScriptTags());
-server.use(prerender.httpHeaders());
-server.start();
+module.exports = (req, res) => {
+  res.end(`Hello from Node.js on Now 2.0!`);
+};
